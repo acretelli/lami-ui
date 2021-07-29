@@ -1,18 +1,18 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
-import { Button, Props } from '../src/Button';
 import { action } from '@storybook/addon-actions';
+import { Button, Props } from '../src/Button';
 
 const meta: Meta = {
   title: 'Button',
   component: Button,
   argTypes: {
-    onClick: { action: 'cliked'},
+    onClick: { action: 'cliked' },
     children: {
-      defaultValue: 'Default Text'
+      defaultValue: 'Default Text',
     },
   },
-}
+};
 
 export default meta;
 
@@ -25,5 +25,5 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   variant: 'secondary',
   children: 'I am secondary',
-  onClick: action('scondary click')
-}
+  onClick: action('scondary click'),
+};
