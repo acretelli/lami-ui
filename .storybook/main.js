@@ -1,12 +1,13 @@
 module.exports = {
   stories: [
-    '../stories/**/*.stories.@(ts|tsx|js|jsx|mdx)',
-    "../src/components/**/**/stories.tsx",
+    "../src/components/**/**/stories.@(ts|tsx|js|jsx|mdx)",
   ],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-a11y'
+    '@storybook/addon-a11y',
+    'storybook-addon-designs',
+    'storybook-addon-designs/register'
   ],
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
   typescript: {

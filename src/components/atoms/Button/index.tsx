@@ -1,5 +1,7 @@
 import React, { HTMLAttributes, ReactNode } from 'react';
 
+import * as S from './styles';
+
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
   /** Provide a text for the button */
   children: ReactNode;
@@ -11,13 +13,8 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 /** A special button */
 export const Button = ({ children, variant = 'primary', ...props }: Props) => {
   return (
-    <button
-      {...props}
-      style={{
-        backgroundColor: variant === 'primary' ? 'blue' : 'gray',
-      }}
-    >
+    <S.Wrapper {...props} backgroundColor={variant}>
       {children}
-    </button>
+    </S.Wrapper>
   );
 };

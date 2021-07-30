@@ -1,5 +1,6 @@
 import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs'
-import { Button, Props } from '../src/Button'
+import { withDesign } from 'storybook-addon-designs'
+import { Button, Props } from './'
 
 <Meta title="MDX/Button" component={Button} />
 
@@ -9,9 +10,21 @@ export const Template = (args) => <Button {...args} />
 
 Let's define a story for our `Button` component:
 
-<Story name="My Button" args={{ children: 'I am in MDX' }}>
-  {Template.bind({})}
-</Story>
+<Canvas>
+  <Story
+    name="My Button"
+    decorators={[withDesign]}
+    parameters={{
+      design: {
+        type: 'figma',
+        url: 'https://www.figma.com/file/GKS28OjXFb4FBfT4Imdsdm/Lami?node-id=80%3A2'
+      }
+    }}
+    args={{ children: 'I am in MDX' }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
 
 <ArgsTable story="My Button" />
 

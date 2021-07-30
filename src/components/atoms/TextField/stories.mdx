@@ -1,0 +1,20 @@
+import { ArgsTable, Meta, Story, Canvas } from '@storybook/addon-docs'
+import { TextField, Props } from './'
+
+<Meta title="MDX/TextField" component={TextField} />
+
+export const Template = (args) => <TextField {...args}  placeholder="Digite um texto aqui"/>
+
+# TextField
+
+Let's define a story for our `TextField` component:
+
+<Canvas>
+  <Story name="My TextField">
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="My TextField" />
+
+I want extra text description here!!!
