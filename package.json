@@ -41,11 +41,11 @@
   "size-limit": [
     {
       "path": "dist/lami-ui.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "20 KB"
     },
     {
       "path": "dist/lami-ui.esm.js",
-      "limit": "10 KB"
+      "limit": "20 KB"
     }
   ],
   "devDependencies": {
